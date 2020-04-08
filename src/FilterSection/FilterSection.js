@@ -14,8 +14,8 @@ const FilterSection = () => {
   ];
 
   const buyers = [
-    { id: 'ira', label: 'Ira', avatar: 'example/source/to/avatar' },
-    { id: 'petia', label: 'Petia', avatar: 'example/source/to/avatar' }
+    { id: 'ira', label: 'Ira', avatar: 'https://via.placeholder.com/24' },
+    { id: 'petia', label: 'Petia', avatar: 'https://via.placeholder.com/24' }
   ];
 
   return (
