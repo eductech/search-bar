@@ -1,0 +1,119 @@
+// mixins
+
+@mixin avatar {
+    flex: 0 0 18px;
+    height: 18px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+@mixin unset-list-styles {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+// dropdown
+
+.dropdown {
+    position: relative;
+
+    &--options-hidden {
+        .dropdown__options {
+            display: none;
+        }
+
+        .dropdown__panel::after {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 6px solid black;
+        }
+    }
+
+    &--options-visible {
+        .dropdown__options {
+            display: block;
+        }
+
+        .dropdown__panel::after {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 6px solid black;
+        }
+    }
+}
+
+.dropdown__panel {
+    position: relative;
+    background: none;
+    border: 1px solid grey;
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    width: 180px;
+    display: flex;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 0; 
+        height: 0;
+        position: absolute;
+        top: 14px;
+        right: 10px;
+    }
+}
+
+.dropdown__options {
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);;
+}
+
+
+
+// dropdown-with-search
+
+.dropdown-with-search__search {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 0.5rem 0.7rem;
+}
+
+.dropdown-with-search__options {
+    @include unset-list-styles;
+}
+
+.dropdown-with-search__option {
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+
+// dropdown-with-avatar
+
+.dropdown-with-avatars__avatar {
+    @include avatar;
+}
+
+.dropdown-with-avatars__option {
+    display: flex;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+.dropdown-with-avatars__options {
+    @include unset-list-styles;
+}
+
+.dropdown-with-avatars__option-avatar {
+    @include avatar;
+}
