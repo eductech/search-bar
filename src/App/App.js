@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <FilterSection
-        rows={[
+        cols={[
           <>
             <DropdownWithSearch options={cars} placeholder="Select buyer" />
             <DropdownWithAvatars options={buyers} placeholder={{ label: 'Select car' }} />

@@ -4,6 +4,7 @@
     background: none;
     padding: 0.5rem;
     cursor: pointer;
+    width: 96px;
 }
 .button:hover {
     opacity: 0.8;

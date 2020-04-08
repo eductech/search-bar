@@ -1,0 +1,42 @@
+.filter-section {
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.filter-section__raw {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 991px) {
+    .filter-section__raw {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        & > * {
+            margin: 0.5rem 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .filter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-section__raw {
+        margin: 0;
+        max-width: 320px;
+
+        &:last-child {
+            flex-direction: row;
+        }
+    }
+}

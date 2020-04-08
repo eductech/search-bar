@@ -19,6 +19,7 @@
 
 .dropdown {
     position: relative;
+    width: 180px;
 
     &--options-hidden {
         .dropdown__options {
@@ -51,7 +52,7 @@
     border: 1px solid grey;
     padding: 0.5rem 0.7rem;
     border-radius: 4px;
-    width: 180px;
+    width: 100%;
     display: flex;
 
     &::after {

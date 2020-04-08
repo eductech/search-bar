@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './FilterSection.css';
+import './FilterSection.scss';
 
-const FilterSection = ({ rows }) => {
+const FilterSection = ({ cols }) => {
   return (
     <section className="filter-section">
-      {rows.map(row => (
+      {cols.map(col => (
         <div className="filter-section__raw">
-          {row}
+          {col}
         </div>
       ))}
     </section>
